@@ -1,5 +1,8 @@
 # worldview
 
+**DOI**: [10.5281/zenodo.19191015](https://doi.org/10.5281/zenodo.19191015)
+**Zenodo**: [https://zenodo.org/records/19191015](https://zenodo.org/records/19191015)
+
 **Philosophical-ethical worldview layer with normative metrics, criticality and
 common-good alignment for GenesisAeon.**
 
@@ -27,7 +30,7 @@ ecosystem and integrates tightly with **Sigillin** (symbolic layer) and the
 - [API Reference](reference.md) — full class and method documentation
 - [GitHub Repository](https://github.com/GenesisAeon/worldview)
 - [PyPI Package](https://pypi.org/project/worldview/)
-- [Zenodo DOI](https://doi.org/10.5281/zenodo.worldview)
+- [Zenodo DOI](https://doi.org/10.5281/zenodo.19191015)
 
 ## Mathematical Foundation
 

@@ -1,14 +1,16 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19191015.svg)](https://doi.org/10.5281/zenodo.19191015)
+[![PyPI version](https://img.shields.io/pypi/v/worldview)](https://pypi.org/project/worldview/)
+[![Tests](https://img.shields.io/badge/tests-99.59%25-green)](https://github.com/GenesisAeon/worldview/actions)
+
 # worldview
 
-**Philosophical-ethical worldview layer with normative metrics, criticality and
-common-good alignment for GenesisAeon.**
+**Philosophisch-ethischer Layer mit normativen Metriken, Kritikalität & Gemeinwohl-Alignment**
 
-[![CI](https://github.com/GenesisAeon/worldview/actions/workflows/ci.yml/badge.svg)](https://github.com/GenesisAeon/worldview/actions/workflows/ci.yml)
-[![Coverage](https://img.shields.io/badge/coverage-99%25-brightgreen)](https://github.com/GenesisAeon/worldview)
-[![PyPI](https://img.shields.io/pypi/v/worldview)](https://pypi.org/project/worldview/)
-[![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue)](https://www.python.org)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Zenodo](https://zenodo.org/badge/DOI/10.5281/zenodo.worldview.svg)](https://doi.org/10.5281/zenodo.worldview)
+Version 0.1.0 – GenesisAeon Project
+**DOI**: 10.5281/zenodo.19191015
+**Zenodo Record**: https://zenodo.org/records/19191015
+
+WorldviewEngine + CriticalityChecker (CREP + 12 Regeln) + AlignmentFramework (Personhood 0–6) + normative Metriken. Built with diamond-setup --template genesis.
 
 ---
 
@@ -242,8 +244,8 @@ built-in rules:
   title     = {worldview: Philosophical-Ethical Worldview Layer v0.1.0},
   year      = {2024},
   publisher = {Zenodo},
-  doi       = {10.5281/zenodo.worldview},
-  url       = {https://doi.org/10.5281/zenodo.worldview}
+  doi       = {10.5281/zenodo.19191015},
+  url       = {https://doi.org/10.5281/zenodo.19191015}
 }
 ```
 

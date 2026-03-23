@@ -1,55 +1,15 @@
 {
-  "title": "worldview: Philosophical-Ethical Worldview Layer v0.1.0",
-  "description": "worldview is the philosophical-ethical assessment layer of the GenesisAeon ecosystem. It provides the WorldviewEngine for computing normative metrics (Coherence, Resonance, Emergence, Poetics, Criticality, Common-Good Alignment), the CriticalityChecker implementing the Critical Reflexive Evaluation Protocol (CREP v0.3), and the AlignmentFramework for Common-Good and Personhood-Level assessment following the GenesisAeon Normative Framework (GNF v0.2). Integrates with Sigillin, unified-mandala, aeon-ai, genesis-os, universums-sim, entropy-governance, and utac-core.",
-  "upload_type": "software",
-  "access_right": "open",
-  "license": "MIT",
+  "title": "GenesisAeon/worldview: v0.1.0 – Philosophisch-ethischer Layer mit normativen Metriken, Kritikalität & Gemeinwohl-Alignment",
   "version": "0.1.0",
-  "publication_date": "2024-01-01",
+  "doi": "10.5281/zenodo.19191015",
   "creators": [
     {
-      "name": "GenesisAeon",
-      "affiliation": "GenesisAeon Project"
+      "name": "GenesisAeon Project"
     }
   ],
-  "keywords": [
-    "worldview",
-    "philosophy",
-    "ethics",
-    "normative-metrics",
-    "criticality",
-    "common-good",
-    "genesisaeon",
-    "emergence",
-    "coherence",
-    "resonance",
-    "CREP",
-    "sigillin",
-    "alignment",
-    "artificial-intelligence"
-  ],
-  "related_identifiers": [
-    {
-      "identifier": "https://github.com/GenesisAeon/worldview",
-      "relation": "isSupplementTo",
-      "scheme": "url"
-    },
-    {
-      "identifier": "https://pypi.org/project/worldview/",
-      "relation": "isIdenticalTo",
-      "scheme": "url"
-    }
-  ],
-  "references": [
-    "Shannon, C.E. (1948). A Mathematical Theory of Communication. Bell System Technical Journal, 27(3), 379-423.",
-    "Kullback, S., & Leibler, R.A. (1951). On Information and Sufficiency. Annals of Mathematical Statistics, 22(1), 79-86.",
-    "GenesisAeon (2024). Critical Reflexive Evaluation Protocol (CREP) v0.3.",
-    "GenesisAeon (2024). GenesisAeon Normative Framework (GNF) v0.2."
-  ],
-  "language": "eng",
-  "communities": [
-    {
-      "identifier": "genesisaeon"
-    }
-  ]
+  "description": "Philosophisch-ethischer Worldview-Layer: WorldviewEngine mit normativen Metriken (Coherence, Resonance, Emergence, Poetics + Kritikalität), CriticalityChecker und AlignmentFramework (Personhood-Levels 0–6) für das GenesisAeon-Ökosystem.",
+  "keywords": ["Worldview", "Criticality", "Gemeinwohl-Alignment", "Personhood", "normative-metrics", "GenesisAeon", "philosophical-layer"],
+  "license": "MIT",
+  "upload_type": "software",
+  "access_right": "open"
 }
