@@ -32,7 +32,7 @@ jobs:
         run: ruff format --check src tests
 
       - name: Type check (mypy)
-        run: mypy src
+        run: mypy src/worldview
 
       - name: Run tests
         run: pytest --cov=worldview --cov-report=xml
