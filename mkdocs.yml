@@ -1,22 +1,22 @@
-site_name: Diamond Setup
-site_description: Universal Python project scaffold — generate professional project skeletons in seconds
+site_name: worldview
+site_description: Philosophical-ethical worldview layer with normative metrics, criticality and common-good alignment for GenesisAeon
 site_author: GenesisAeon
-repo_url: https://github.com/GenesisAeon/diamond-setup
-repo_name: GenesisAeon/diamond-setup
+repo_url: https://github.com/GenesisAeon/worldview
+repo_name: GenesisAeon/worldview
 
 theme:
   name: material
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
+      primary: deep purple
       accent: indigo
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
+      primary: deep purple
       accent: indigo
       toggle:
         icon: material/brightness-4
@@ -36,8 +36,21 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+  - tables
+  - attr_list
+
+extra_javascript:
+  - javascripts/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+
+extra_css:
+  - https://unpkg.com/katex@0/dist/katex.min.css
 
 nav:
   - Home: index.md
-  - CLI Reference: cli.md
-  - Templates: templates.md
+  - API Reference: reference.md
+
+strict: true
