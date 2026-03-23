@@ -94,8 +94,7 @@ def assess(
     Common-Good Alignment scores.
     """
     total_weight = (
-        coherence_weight + resonance_weight + emergence_weight
-        + poetics_weight + criticality_weight
+        coherence_weight + resonance_weight + emergence_weight + poetics_weight + criticality_weight
     )
     if abs(total_weight - 1.0) > 1e-4:
         err_console.print(
@@ -182,9 +181,7 @@ def critique(
         float, typer.Option("--externality-index", min=0.0, max=1.0)
     ] = 1.0,
     justice_index: Annotated[float, typer.Option("--justice-index", min=0.0, max=1.0)] = 1.0,
-    common_good_score: Annotated[
-        float, typer.Option("--common-good", min=0.0, max=1.0)
-    ] = 1.0,
+    common_good_score: Annotated[float, typer.Option("--common-good", min=0.0, max=1.0)] = 1.0,
     strict: Annotated[bool, typer.Option("--strict/--no-strict")] = False,
     export: Annotated[Path | None, typer.Option("--export", "-o")] = None,
 ) -> None:

@@ -146,21 +146,25 @@ class TestCritiqueCommand:
             app,
             [
                 "critique",
-                "--coherence", "1.0",
-                "--ethical-score", "1.0",
-                "--contradiction-rate", "0.0",
-                "--externality-index", "1.0",
-                "--justice-index", "1.0",
-                "--common-good", "1.0",
+                "--coherence",
+                "1.0",
+                "--ethical-score",
+                "1.0",
+                "--contradiction-rate",
+                "0.0",
+                "--externality-index",
+                "1.0",
+                "--justice-index",
+                "1.0",
+                "--common-good",
+                "1.0",
             ],
         )
         assert result.exit_code == 0
         assert "No flags" in result.output
 
     def test_critique_strict_mode(self) -> None:
-        result = runner.invoke(
-            app, ["critique", "--coherence", "0.5", "--strict"]
-        )
+        result = runner.invoke(app, ["critique", "--coherence", "0.5", "--strict"])
         assert result.exit_code in (0, 2)
 
     def test_critique_export_json(self, tmp_path: Path) -> None:
@@ -175,15 +179,11 @@ class TestCritiqueCommand:
         assert "Consistency" in result.output or "Coherence" in result.output
 
     def test_critique_failed_on_critical_ethics(self) -> None:
-        result = runner.invoke(
-            app, ["critique", "--ethical-score", "0.1"]
-        )
+        result = runner.invoke(app, ["critique", "--ethical-score", "0.1"])
         assert result.exit_code == 2
 
     def test_critique_low_externality(self) -> None:
-        result = runner.invoke(
-            app, ["critique", "--externality-index", "0.1"]
-        )
+        result = runner.invoke(app, ["critique", "--externality-index", "0.1"])
         assert result.exit_code in (0, 2)
 
 
@@ -206,8 +206,10 @@ class TestAlignCommand:
             app,
             [
                 "align",
-                "--scores", "solidarity=0.8",
-                "--scores", "justice=0.9",
+                "--scores",
+                "solidarity=0.8",
+                "--scores",
+                "justice=0.9",
             ],
         )
         assert result.exit_code in (0, 1, 2)
@@ -244,12 +246,18 @@ class TestAlignCommand:
             app,
             [
                 "align",
-                "--scores", "solidarity=1.0",
-                "--scores", "sustainability=1.0",
-                "--scores", "justice=1.0",
-                "--scores", "freedom=1.0",
-                "--scores", "dignity=1.0",
-                "--scores", "participation=1.0",
+                "--scores",
+                "solidarity=1.0",
+                "--scores",
+                "sustainability=1.0",
+                "--scores",
+                "justice=1.0",
+                "--scores",
+                "freedom=1.0",
+                "--scores",
+                "dignity=1.0",
+                "--scores",
+                "participation=1.0",
             ],
         )
         assert result.exit_code in (0, 1, 2)
@@ -267,36 +275,45 @@ class TestAlignCommand:
 class TestPackagePublicAPI:
     def test_worldview_importable(self) -> None:
         import worldview
+
         assert worldview.__version__ == "0.1.0"
 
     def test_engine_importable(self) -> None:
         from worldview import WorldviewEngine
+
         assert callable(WorldviewEngine)
 
     def test_checker_importable(self) -> None:
         from worldview import CriticalityChecker
+
         assert callable(CriticalityChecker)
 
     def test_alignment_importable(self) -> None:
         from worldview import AlignmentFramework
+
         assert callable(AlignmentFramework)
 
     def test_personhood_level_importable(self) -> None:
         from worldview import PersonhoodLevel
+
         assert PersonhoodLevel.NORMATIVE.value == 5
 
     def test_common_good_metric_importable(self) -> None:
         from worldview import CommonGoodMetric
+
         assert CommonGoodMetric is not None
 
     def test_critique_report_importable(self) -> None:
         from worldview import CritiqueReport
+
         assert CritiqueReport is not None
 
     def test_normative_metrics_importable(self) -> None:
         from worldview import NormativeMetrics
+
         assert NormativeMetrics is not None
 
     def test_worldview_assessment_importable(self) -> None:
         from worldview import WorldviewAssessment
+
         assert WorldviewAssessment is not None

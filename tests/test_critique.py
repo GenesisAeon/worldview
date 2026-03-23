@@ -304,10 +304,7 @@ class TestCriticalityCheckerLogical:
             coherence=0.9,
             contradiction_rate=0.0,
         )
-        logical = [
-            f for f in report.flags
-            if f.category == CritiqueCategory.LOGICAL_CONSISTENCY
-        ]
+        logical = [f for f in report.flags if f.category == CritiqueCategory.LOGICAL_CONSISTENCY]
         assert logical == []
 
     def test_logical_error_blocks_report(self) -> None:
@@ -358,8 +355,7 @@ class TestCriticalityCheckerEthical:
             justice_index=0.9,
         )
         ethical_flags = [
-            f for f in report.flags
-            if f.category == CritiqueCategory.ETHICAL_IMPLICATION
+            f for f in report.flags if f.category == CritiqueCategory.ETHICAL_IMPLICATION
         ]
         assert ethical_flags == []
 
@@ -413,8 +409,7 @@ class TestCriticalityCheckerNormative:
             common_good_score=0.9,
         )
         normative_flags = [
-            f for f in report.flags
-            if f.category == CritiqueCategory.NORMATIVE_ALIGNMENT
+            f for f in report.flags if f.category == CritiqueCategory.NORMATIVE_ALIGNMENT
         ]
         assert normative_flags == []
 

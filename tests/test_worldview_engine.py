@@ -432,9 +432,7 @@ class TestWorldviewEngineAssess:
         assert result.weights.coherence == pytest.approx(0.5)
 
     def test_clusters_influence_coherence(self) -> None:
-        clusters = [
-            PropositionalCluster(name="A", internal_consistency=0.1, weight=1.0)
-        ]
+        clusters = [PropositionalCluster(name="A", internal_consistency=0.1, weight=1.0)]
         result_low = self.engine.assess("low", clusters=clusters)
         result_high = self.engine.assess("high")  # no clusters → coherence=1.0
         assert result_high.metrics.coherence >= result_low.metrics.coherence

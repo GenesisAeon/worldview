@@ -119,9 +119,7 @@ class CommonGoodMetric(BaseModel):
         if self.dimensions:
             total_weight = sum(d.weight for d in self.dimensions)
             weighted_sum = sum(d.score * d.weight for d in self.dimensions)
-            self.composite_score = float(
-                np.clip(weighted_sum / total_weight, 0.0, 1.0)
-            )
+            self.composite_score = float(np.clip(weighted_sum / total_weight, 0.0, 1.0))
         return self
 
     @property

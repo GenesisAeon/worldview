@@ -104,10 +104,7 @@ class TestCommonGoodDimension:
 
 class TestCommonGoodMetric:
     def _metric(self, scores: list[tuple[str, float, float]]) -> CommonGoodMetric:
-        dims = [
-            CommonGoodDimension(name=n, score=s, weight=w)
-            for n, s, w in scores
-        ]
+        dims = [CommonGoodDimension(name=n, score=s, weight=w) for n, s, w in scores]
         return CommonGoodMetric(
             entity_id="test",
             dimensions=dims,
@@ -179,7 +176,12 @@ class TestDefaultDimensions:
     def test_expected_names_present(self) -> None:
         names = {d["name"] for d in DEFAULT_DIMENSIONS}
         all_dims = [
-            "solidarity", "sustainability", "justice", "freedom", "dignity", "participation"
+            "solidarity",
+            "sustainability",
+            "justice",
+            "freedom",
+            "dignity",
+            "participation",
         ]
         for expected in all_dims:
             assert expected in names
@@ -221,9 +223,7 @@ class TestAlignmentFrameworkEvaluate:
         assert result.composite_score > 0.0
 
     def test_personhood_level_stored(self) -> None:
-        result = self.framework.evaluate(
-            "agent", {}, personhood_level=PersonhoodLevel.NORMATIVE
-        )
+        result = self.framework.evaluate("agent", {}, personhood_level=PersonhoodLevel.NORMATIVE)
         assert result.personhood_level == PersonhoodLevel.NORMATIVE
 
     def test_score_clamped_to_unit_interval(self) -> None:
@@ -257,9 +257,7 @@ class TestAlignmentFrameworkAssessPersonhood:
         self.framework = AlignmentFramework()
 
     def test_collective_moral_agent_is_transcendent(self) -> None:
-        level = self.framework.assess_personhood(
-            has_moral_agency=True, operates_collectively=True
-        )
+        level = self.framework.assess_personhood(has_moral_agency=True, operates_collectively=True)
         assert level == PersonhoodLevel.TRANSCENDENT
 
     def test_moral_agent_is_normative(self) -> None:

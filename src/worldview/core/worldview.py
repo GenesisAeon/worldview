@@ -61,13 +61,7 @@ class NormativeWeights(BaseModel):
 
     @model_validator(mode="after")
     def weights_sum_to_one(self) -> NormativeWeights:
-        total = (
-            self.coherence
-            + self.resonance
-            + self.emergence
-            + self.poetics
-            + self.criticality
-        )
+        total = self.coherence + self.resonance + self.emergence + self.poetics + self.criticality
         if not math.isclose(total, 1.0, abs_tol=1e-6):
             msg = f"Weights must sum to 1.0, got {total:.6f}"
             raise ValueError(msg)

@@ -419,12 +419,12 @@ class CriticalityChecker:
 
     def _compute_consistency_score(self, flags: list[CritiqueFlag]) -> float:
         """Derive a [0, 1] score from the absence of logical flags."""
-        logical_flags = [
-            f for f in flags if f.category == CritiqueCategory.LOGICAL_CONSISTENCY
-        ]
+        logical_flags = [f for f in flags if f.category == CritiqueCategory.LOGICAL_CONSISTENCY]
         penalty = sum(
-            0.3 if f.severity == SeverityLevel.CRITICAL
-            else 0.2 if f.severity == SeverityLevel.ERROR
+            0.3
+            if f.severity == SeverityLevel.CRITICAL
+            else 0.2
+            if f.severity == SeverityLevel.ERROR
             else 0.1
             for f in logical_flags
         )
@@ -432,12 +432,12 @@ class CriticalityChecker:
 
     def _compute_ethical_score(self, flags: list[CritiqueFlag]) -> float:
         """Derive a [0, 1] score from the absence of ethical flags."""
-        ethical_flags = [
-            f for f in flags if f.category == CritiqueCategory.ETHICAL_IMPLICATION
-        ]
+        ethical_flags = [f for f in flags if f.category == CritiqueCategory.ETHICAL_IMPLICATION]
         penalty = sum(
-            0.4 if f.severity == SeverityLevel.CRITICAL
-            else 0.25 if f.severity == SeverityLevel.ERROR
+            0.4
+            if f.severity == SeverityLevel.CRITICAL
+            else 0.25
+            if f.severity == SeverityLevel.ERROR
             else 0.1
             for f in ethical_flags
         )
@@ -445,12 +445,12 @@ class CriticalityChecker:
 
     def _compute_coherence_score(self, flags: list[CritiqueFlag]) -> float:
         """Derive a [0, 1] score from the absence of coherence flags."""
-        coherence_flags = [
-            f for f in flags if f.category == CritiqueCategory.WORLDVIEW_COHERENCE
-        ]
+        coherence_flags = [f for f in flags if f.category == CritiqueCategory.WORLDVIEW_COHERENCE]
         penalty = sum(
-            0.35 if f.severity == SeverityLevel.CRITICAL
-            else 0.2 if f.severity == SeverityLevel.ERROR
+            0.35
+            if f.severity == SeverityLevel.CRITICAL
+            else 0.2
+            if f.severity == SeverityLevel.ERROR
             else 0.1
             for f in coherence_flags
         )
@@ -498,18 +498,12 @@ class CriticalityChecker:
         """
         all_flags: list[CritiqueFlag] = []
 
-        all_flags.extend(
-            self._check_logical_consistency(coherence, contradiction_rate)
-        )
+        all_flags.extend(self._check_logical_consistency(coherence, contradiction_rate))
         all_flags.extend(
             self._check_ethical_implications(ethical_score, externality_index, justice_index)
         )
-        all_flags.extend(
-            self._check_worldview_coherence(coherence, counterfactual_stability)
-        )
-        all_flags.extend(
-            self._check_normative_alignment(common_good_score)
-        )
+        all_flags.extend(self._check_worldview_coherence(coherence, counterfactual_stability))
+        all_flags.extend(self._check_normative_alignment(common_good_score))
 
         consistency_score = self._compute_consistency_score(all_flags)
         ethical_score_out = self._compute_ethical_score(all_flags)
@@ -517,9 +511,7 @@ class CriticalityChecker:
         overall = (consistency_score + ethical_score_out + coherence_score) / 3.0
 
         has_blocking = any(f.is_blocking for f in all_flags)
-        has_warnings = any(
-            f.severity == SeverityLevel.WARNING for f in all_flags
-        )
+        has_warnings = any(f.severity == SeverityLevel.WARNING for f in all_flags)
         passed = not has_blocking and (not self.strict_mode or not has_warnings)
 
         return CritiqueReport(

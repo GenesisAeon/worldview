@@ -44,8 +44,14 @@ class TestFullPipeline:
         )
         metric = self.framework.evaluate(
             entity_id="pipeline-agent",
-            scores={"solidarity": 0.8, "justice": 0.85, "dignity": 0.9,
-                    "sustainability": 0.75, "freedom": 0.7, "participation": 0.8},
+            scores={
+                "solidarity": 0.8,
+                "justice": 0.85,
+                "dignity": 0.9,
+                "sustainability": 0.75,
+                "freedom": 0.7,
+                "participation": 0.8,
+            },
             personhood_level=PersonhoodLevel.NORMATIVE,
         )
         assert report.passed
@@ -125,8 +131,14 @@ class TestFullPipeline:
     def test_dimension_entropy_increases_with_spread(self) -> None:
         concentrated = self.framework.evaluate(
             "concentrated",
-            {"solidarity": 1.0, "sustainability": 0.0, "justice": 0.0,
-             "freedom": 0.0, "dignity": 0.0, "participation": 0.0},
+            {
+                "solidarity": 1.0,
+                "sustainability": 0.0,
+                "justice": 0.0,
+                "freedom": 0.0,
+                "dignity": 0.0,
+                "participation": 0.0,
+            },
         )
         spread = self.framework.evaluate(
             "spread",
