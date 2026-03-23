@@ -1,0 +1,1 @@
+"""Worldview CLI entry point."""
