@@ -1,6 +1,6 @@
-[project]
+﻿[project]
 name = "worldview"
-version = "0.1.0"
+version = "0.3.1"
 description = "Philosophical-ethical worldview layer with normative metrics, criticality and common-good alignment for GenesisAeon"
 readme = "README.md"
 license = { text = "MIT" }
@@ -123,3 +123,4 @@ omit = ["tests/*"]
 
 [tool.coverage.report]
 fail_under = 99
+

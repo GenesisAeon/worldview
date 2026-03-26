@@ -1,4 +1,4 @@
-"""worldview — Philosophical-ethical worldview layer with normative metrics.
+﻿"""worldview â€” Philosophical-ethical worldview layer with normative metrics.
 
 This package provides the WorldviewEngine for assessing philosophical coherence,
 ethical implications, and common-good alignment of world-models in the GenesisAeon
@@ -23,7 +23,7 @@ from worldview.governance.alignment import (
     PersonhoodLevel,
 )
 
-__version__ = "0.1.0"
+__version__ = "0.3.1"
 __author__ = "GenesisAeon"
 __license__ = "MIT"
 
@@ -38,3 +38,4 @@ __all__ = [
     "PersonhoodLevel",
     "__version__",
 ]
+
