@@ -355,7 +355,7 @@ def info() -> None:
     console.print(
         Panel(
             "[bold cyan]worldview[/bold cyan] — Philosophical-Ethical Worldview Layer",
-            subtitle=f"v{__version__} · MIT License · GenesisAeon",
+            subtitle=f"v{__version__} · GPL-3.0-or-later · GenesisAeon",
             box=box.DOUBLE_EDGE,
         )
     )

@@ -7,6 +7,7 @@ from pathlib import Path
 
 from typer.testing import CliRunner
 
+import worldview
 from worldview.cli.main import app
 
 runner = CliRunner()
@@ -26,7 +27,7 @@ class TestVersionFlag:
     def test_version_short_flag(self) -> None:
         result = runner.invoke(app, ["-V"])
         assert result.exit_code == 0
-        assert "0.1.0" in result.output
+        assert worldview.__version__ in result.output
 
 
 # ---------------------------------------------------------------------------
@@ -41,7 +42,7 @@ class TestInfoCommand:
 
     def test_info_shows_version(self) -> None:
         result = runner.invoke(app, ["info"])
-        assert "0.1.0" in result.output
+        assert worldview.__version__ in result.output
 
     def test_info_shows_genesisaeon(self) -> None:
         result = runner.invoke(app, ["info"])
@@ -274,9 +275,11 @@ class TestAlignCommand:
 
 class TestPackagePublicAPI:
     def test_worldview_importable(self) -> None:
+        import re
+
         import worldview
 
-        assert worldview.__version__ == "0.1.0"
+        assert re.match(r"^\d+\.\d+\.\d+$", worldview.__version__)
 
     def test_engine_importable(self) -> None:
         from worldview import WorldviewEngine
