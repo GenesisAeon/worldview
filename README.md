@@ -226,23 +226,43 @@ built-in rules:
 
 | Package              | Version  | Role                                      |
 |----------------------|----------|-------------------------------------------|
-| `unified-mandala`    | ≥ 0.2.0  | Symbolic integration layer                |
-| `aeon-ai`            | ≥ 0.2.0  | AI coordination framework                 |
-| `genesis-os`         | ≥ 0.2.0  | Operating system layer                    |
-| `universums-sim`     | ≥ 0.1.0  | Universe simulation engine                |
-| `entropy-governance` | ≥ 0.1.0  | Entropy management                        |
-| `sigillin`           | ≥ 0.1.0  | Sigil symbolic layer (CREP bridge)        |
-| `utac-core`          | ≥ 0.1.0  | Universal Task Allocation Core            |
+| `unified-mandala`    | ≥ 1.0.0  | Symbolic integration layer                |
+| `aeon-ai`            | ≥ 1.0.0  | AI coordination framework                 |
+| `genesis-os`         | ≥ 1.0.0  | Operating system layer                    |
+| `universums-sim`     | ≥ 1.0.0  | Universe simulation engine                |
+| `entropy-governance` | ≥ 1.0.0  | Entropy management                        |
+| `sigillin`           | ≥ 1.0.0  | Sigil symbolic layer (CREP bridge)        |
+| `utac-core`          | ≥ 1.0.0  | Universal Task Allocation Core            |
+
+`worldview` is **P-GOV-3** in the GenesisAeon ecosystem registry, occupying
+the governance domain alongside `entropy-governance` and `gemeinwohl` — it
+provides the philosophical-ethical CREP evaluation layer that downstream
+governance packages build on.
 
 ---
 
-## Scientific Citation
+## License
+
+The source code in this repository is licensed under
+**GPL-3.0-or-later** (see [`LICENSE`](LICENSE)).
+
+Documentation (this README, `README_QUICKSTART.md`, `docs/`) is licensed
+separately under **CC BY 4.0** (see [`LICENSE-DOCS.md`](LICENSE-DOCS.md)).
+
+---
+
+## Citation
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19191015.svg)](https://doi.org/10.5281/zenodo.19191015)
+
+DOI is assigned automatically on each GitHub Release via the
+Zenodo–GitHub integration enabled for this repository.
 
 ```bibtex
-@software{genesisaeon_worldview_2024,
-  author    = {GenesisAeon},
-  title     = {worldview: Philosophical-Ethical Worldview Layer v0.1.0},
-  year      = {2024},
+@software{genesisaeon_worldview_2026,
+  author    = {Römer, Johann},
+  title     = {worldview: Philosophical-Ethical Worldview Layer v1.0.0},
+  year      = {2026},
   publisher = {Zenodo},
   doi       = {10.5281/zenodo.19191015},
   url       = {https://doi.org/10.5281/zenodo.19191015}

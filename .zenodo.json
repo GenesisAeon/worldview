@@ -1,15 +1,38 @@
 {
-  "title": "GenesisAeon/worldview: v0.1.0 – Philosophisch-ethischer Layer mit normativen Metriken, Kritikalität & Gemeinwohl-Alignment",
-  "version": "0.1.0",
+  "title": "worldview — P-GOV-3: Philosophical-ethical worldview layer with normative metrics, criticality and common-good alignment for GenesisAeon",
+  "version": "1.0.0",
   "doi": "10.5281/zenodo.19191015",
+  "description": "<p>Philosophical-ethical worldview layer: WorldviewEngine with normative metrics (Coherence, Resonance, Emergence, Poetics, Criticality), CriticalityChecker (CREP) and AlignmentFramework (Personhood-Levels 0–6) for the GenesisAeon ecosystem.</p><p>Part of the <strong>GenesisAeon</strong> ecosystem (P-GOV-3, domain: governance / philosophical-ethical CREP evaluation).</p><p>See <a href=\"https://github.com/GenesisAeon/worldview\">github.com/GenesisAeon/worldview</a> for source, documentation, and reproducibility notebooks.</p>",
   "creators": [
     {
-      "name": "GenesisAeon Project"
+      "name": "Römer, Johann",
+      "affiliation": "Independent Researcher / MOR Research Collective"
     }
   ],
-  "description": "Philosophisch-ethischer Worldview-Layer: WorldviewEngine mit normativen Metriken (Coherence, Resonance, Emergence, Poetics + Kritikalität), CriticalityChecker und AlignmentFramework (Personhood-Levels 0–6) für das GenesisAeon-Ökosystem.",
-  "keywords": ["Worldview", "Criticality", "Gemeinwohl-Alignment", "Personhood", "normative-metrics", "GenesisAeon", "philosophical-layer"],
-  "license": "MIT",
+  "license": "GPL-3.0-or-later",
   "upload_type": "software",
-  "access_right": "open"
+  "access_right": "open",
+  "keywords": [
+    "GenesisAeon",
+    "P-GOV-3",
+    "governance",
+    "UTAC",
+    "CREP",
+    "open science",
+    "worldview",
+    "ethics",
+    "common-good"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.19645351",
+      "relation": "isPartOf",
+      "resource_type": "publication-article",
+      "scheme": "doi"
+    }
+  ],
+  "communities": [
+    { "identifier": "genesisaeon" }
+  ],
+  "notes": "Source code is licensed GPL-3.0-or-later; documentation (README, docs/) is licensed separately under CC BY 4.0 (see LICENSE-DOCS.md)."
 }
