@@ -70,7 +70,7 @@ worldview = "worldview.cli.main:app"
 Repository = "https://github.com/GenesisAeon/worldview"
 Issues = "https://github.com/GenesisAeon/worldview/issues"
 Documentation = "https://genesisaeon.github.io/worldview"
-Zenodo = "https://doi.org/10.5281/zenodo.worldview"
+Zenodo = "https://doi.org/10.5281/zenodo.21013782"
 
 [build-system]
 requires = ["hatchling"]

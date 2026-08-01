@@ -366,7 +366,7 @@ def info() -> None:
     table.add_row("Author", "GenesisAeon")
     table.add_row("Repository", "https://github.com/GenesisAeon/worldview")
     table.add_row("Documentation", "https://genesisaeon.github.io/worldview")
-    table.add_row("Zenodo DOI", "https://doi.org/10.5281/zenodo.worldview")
+    table.add_row("Zenodo DOI", "https://doi.org/10.5281/zenodo.21013782")
     table.add_row("CREP Reference", "Critical Reflexive Evaluation Protocol v0.3")
     table.add_row("Sigillin Layer", "sigillin >= 0.1.0")
     table.add_row("Python", f"{sys.version_info.major}.{sys.version_info.minor}+")

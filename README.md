@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19191015.svg)](https://doi.org/10.5281/zenodo.19191015)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21013782.svg)](https://doi.org/10.5281/zenodo.21013782)
 [![PyPI version](https://img.shields.io/pypi/v/worldview)](https://pypi.org/project/worldview/)
 [![Tests](https://img.shields.io/badge/tests-99.59%25-green)](https://github.com/GenesisAeon/worldview/actions)
 
@@ -7,8 +7,8 @@
 **Philosophisch-ethischer Layer mit normativen Metriken, Kritikalität & Gemeinwohl-Alignment**
 
 Version 0.1.0 – GenesisAeon Project
-**DOI**: 10.5281/zenodo.19191015
-**Zenodo Record**: https://zenodo.org/records/19191015
+**DOI**: 10.5281/zenodo.21013782
+**Zenodo Record**: https://zenodo.org/records/21013782
 
 WorldviewEngine + CriticalityChecker (CREP + 12 Regeln) + AlignmentFramework (Personhood 0–6) + normative Metriken. Built with diamond-setup --template genesis.
 
@@ -253,7 +253,7 @@ separately under **CC BY 4.0** (see [`LICENSE-DOCS.md`](LICENSE-DOCS.md)).
 
 ## Citation
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19191015.svg)](https://doi.org/10.5281/zenodo.19191015)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21013782.svg)](https://doi.org/10.5281/zenodo.21013782)
 
 DOI is assigned automatically on each GitHub Release via the
 Zenodo–GitHub integration enabled for this repository.
@@ -264,8 +264,8 @@ Zenodo–GitHub integration enabled for this repository.
   title     = {worldview: Philosophical-Ethical Worldview Layer v1.0.0},
   year      = {2026},
   publisher = {Zenodo},
-  doi       = {10.5281/zenodo.19191015},
-  url       = {https://doi.org/10.5281/zenodo.19191015}
+  doi       = {10.5281/zenodo.21013782},
+  url       = {https://doi.org/10.5281/zenodo.21013782}
 }
 ```
 
