@@ -234,7 +234,7 @@ built-in rules:
 | `sigillin`           | ≥ 1.0.0  | Sigil symbolic layer (CREP bridge)        |
 | `utac-core`          | ≥ 1.0.0  | Universal Task Allocation Core            |
 
-`worldview` is **P-GOV-3** in the GenesisAeon ecosystem registry, occupying
+`worldview` is **P85** (formerly informally **P-GOV-3**) in the GenesisAeon ecosystem registry, occupying
 the governance domain alongside `entropy-governance` and `gemeinwohl` — it
 provides the philosophical-ethical CREP evaluation layer that downstream
 governance packages build on.
