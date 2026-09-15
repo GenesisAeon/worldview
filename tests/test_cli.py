@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 from typer.testing import CliRunner
@@ -11,6 +12,14 @@ import worldview
 from worldview.cli.main import app
 
 runner = CliRunner()
+
+_ANSI_ESCAPE = re.compile(r"\x1b\[[0-9;]*m")
+
+
+def _plain(output: str) -> str:
+    """Strip rich's ANSI escape codes (which can split numeric substrings
+    like a version number into separate highlighted tokens) before matching."""
+    return _ANSI_ESCAPE.sub("", output)
 
 
 # ---------------------------------------------------------------------------
@@ -27,7 +36,7 @@ class TestVersionFlag:
     def test_version_short_flag(self) -> None:
         result = runner.invoke(app, ["-V"])
         assert result.exit_code == 0
-        assert worldview.__version__ in result.output
+        assert worldview.__version__ in _plain(result.output)
 
 
 # ---------------------------------------------------------------------------

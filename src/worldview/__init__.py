@@ -23,7 +23,7 @@ from worldview.governance.alignment import (
     PersonhoodLevel,
 )
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 __author__ = "GenesisAeon"
 __license__ = "GPL-3.0-or-later"
 
